@@ -20,10 +20,30 @@ const deleteUser = (id) => {
     return UserMongo.findByIdAndRemove(id, { returnDocument: "after" });
 }
 
+const addUserAddress = (id, endereco) => {
+
+}
+
+const removeUserAddress = (id) => {
+
+}
+
+const addUserFavProduct = (id, produto) => {
+  
+}
+
+const removeUserFavProduct = (id) => {
+    
+}
+
 module.exports = {
     findUser,
     findAllUser,
     createUser,
     updateUser,
     deleteUser,
+    addUserAddress,
+    removeUserAddress,
+    addUserFavProduct,
+    removeUserFavProduct
 }

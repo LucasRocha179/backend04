@@ -1,7 +1,7 @@
 const userService = require("../services/usuario.service");
 const authService = require("../services/auth.service");
 class Usuario {
-  constructor(nome, nascimento, email, senha, isAdmin = true) {
+  constructor(nome, nascimento, email, senha, isAdmin = true, imagem = "undefined") {
     this.nome = this.validarNome(nome);
     this.nascimento = this.validarData(nascimento);
     this.email = this.validarEmail(email);
@@ -9,7 +9,7 @@ class Usuario {
     this.senha = this.validarSenha(senha);
     this.datacadastro = this.getData();
     this.isAdmin = isAdmin;
-    this.token = "undefined";
+    this.imagem = imagem;
   }
 
   validarNome(nome) {
@@ -94,6 +94,12 @@ const find = async (req, res) => {
     }
     return res.status(200).send(usuario);
   } catch (err) {
+    if(err.kind == "ObjectId"){
+      return res
+      .status(400)
+      .send("Id informado está incorreto, tente novamente!");
+    }
+
     return res
       .status(500)
       .send("Erro no servidor, tente novamente mais tarde!");
@@ -114,7 +120,9 @@ const create = async (req, res) => {
       user.nome,
       user.nascimento,
       user.email,
-      user.senha
+      user.senha,
+      true,
+      user.imagem
     );
     console.log(`LOG: ${usuario.datacadastro} novo usuário ${usuario.userID}`);
     res.status(201).send(await userService.createUser(usuario));
@@ -189,10 +197,54 @@ const deleteUser = async (req, res) => {
   }
 };
 
+const addUserAddress = async (req, res) => {
+  try {
+   
+  } catch (err) {
+    return res
+      .status(500)
+      .send("Erro no servidor, tente novamente mais tarde!");
+  }
+};
+
+const removeUserAddress = async (req, res) => {
+  try {
+   
+  } catch (err) {
+    return res
+      .status(500)
+      .send("Erro no servidor, tente novamente mais tarde!");
+  }
+};
+
+const addUserFavProduct = async (req, res) => {
+  try {
+   
+  } catch (err) {
+    return res
+      .status(500)
+      .send("Erro no servidor, tente novamente mais tarde!");
+  }
+};
+
+const removeUserFavProduct = async (req, res) => {
+  try {
+   
+  } catch (err) {
+    return res
+      .status(500)
+      .send("Erro no servidor, tente novamente mais tarde!");
+  }
+};
+
 module.exports = {
   findAll,
   find,
   create,
   update,
   deleteUser,
+  addUserAddress,
+  removeUserAddress,
+  addUserFavProduct,
+  removeUserFavProduct,
 };

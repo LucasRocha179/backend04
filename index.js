@@ -13,6 +13,8 @@ const port = 3000;
 
 app.use(express.json());
 
+connectToDatabase();
+
 app.get("/", (req, res) => {
   // const url = req.body.url;
 
@@ -23,7 +25,9 @@ app.get("/", (req, res) => {
 
   //   res.send(resposta);
   // })
-  res.send("Seja bem-vindo!");
+  res.send(
+    {message: "Seja bem-vindo a nossa pizzaria!"}
+  );
 });
 
 app.use("/usuario", usuario);
@@ -79,37 +83,6 @@ app.get("/teste-token", (req, res) => {
   });
 });
 
-//função validar está desativada por enquanto pois não estamos mais salvando o token no banco
-app.post("/validar", async (req, res) => {
-  try {
-    const { email, token } = req.body;
-    const user = await authService.loginService(email);
-
-    if (!user) {
-      return res
-        .status(400)
-        .send({ message: "Usuário não encontrado, tente novamente!" });
-    }
-    if (token != user.token) {
-      return res
-        .status(400)
-        .send({ message: "Token incorreto ou expirado, tente novamente!" });
-    }
-    user.token = "";
-    await authService.udpateToken(user);
-
-    res.status(200).send(user);
-  } catch (err) {
-    console.log(`erro: ${err}`);
-  }
-});
-
-// const token = function(){
-//   let token = Math.random().toString(36).substring(2);
-//   return token;
-// };
-
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
-  connectToDatabase();
 });
