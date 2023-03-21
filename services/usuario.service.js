@@ -21,11 +21,37 @@ const deleteUser = (id) => {
 }
 
 const addUserAddress = (id, endereco) => {
-
+    return UserMongo.findOneAndUpdate(
+        {
+            _id: id,
+        },
+        {
+            $push:{
+                enderecos: endereco,
+            }
+        },
+        {
+            rawresult: true,
+        }
+    );
 }
 
-const removeUserAddress = (id) => {
-
+const removeUserAddress = (id, addressId) => {
+    return UserMongo.findOneAndUpdate(
+        {
+            _id: id,
+        },
+        {
+            $pull:{
+                enderecos: {
+                    _id: addressId,
+                },
+            }
+        },
+        {
+            rawresult: true,
+        }
+    );
 }
 
 const addUserFavProduct = (id, produto) => {

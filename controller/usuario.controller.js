@@ -173,23 +173,13 @@ const deleteUser = async (req, res) => {
     }
     const id = req.params.id;
 
-    const usuario = await userService.findUser(id);
-    if (usuario == null) {
-      return res.status(500).send(`O usuário ${id} não existe na base!`);
-    }
+    const deletedUser = await userService.deleteUser(id);
 
-    return res.status(200).send(
-      await userService
-        .deleteUser(id)
-        .then(() => {
-          console.log(`LOG: Usuário ${id} excluído!`);
-        })
-        .catch(() => {
-          console.log(
-            `Erro ao excluir o usuário ${id}, tente novamente mais tarde!`
-          );
-        })
-    );
+    if(deletedUser == null){
+      res.status(404).send({message: "Usuário não encontrato, tente novamente!"});
+    } else {
+      res.status(200).send({message: "Usuário excluído!"});
+    }
   } catch (err) {
     return res
       .status(500)
@@ -199,7 +189,12 @@ const deleteUser = async (req, res) => {
 
 const addUserAddress = async (req, res) => {
   try {
-   
+    req.body.createdAt = new Date();
+    await userService.addUserAddress(req.params.id, req.body);
+      return res
+      .status(201)
+      .send("Novo endereço cadastrado com sucesso!");  
+    
   } catch (err) {
     return res
       .status(500)
@@ -209,7 +204,11 @@ const addUserAddress = async (req, res) => {
 
 const removeUserAddress = async (req, res) => {
   try {
-   
+    await userService.removeUserAddress(req.body.id, req.body.addressId);
+    
+      return res
+      .status(200)
+      .send("Endereço removido com sucesso!");  
   } catch (err) {
     return res
       .status(500)
