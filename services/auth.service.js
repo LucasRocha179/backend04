@@ -1,7 +1,7 @@
 const UserMongo = require("../model/usuario");
 const jwt = require("jsonwebtoken");
 
-const loginService = (email) => UserMongo.findOne({ email });
+const loginService = (email) => UserMongo.findOne({ email }).select("senha");
 
 const udpateToken = (user) => {
     const userID = user.userID;
@@ -14,4 +14,8 @@ const generateToken = (user, segredo) => {
     return jwt.sign(user, segredo);
 };
 
-module.exports = { loginService, udpateToken, generateToken, };
+const validateToken = (token, segredo) => {
+  return jwt.verify(token, segredo);
+};
+
+module.exports = { loginService, udpateToken, generateToken, validateToken, };
