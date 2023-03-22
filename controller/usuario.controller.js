@@ -190,11 +190,17 @@ const deleteUser = async (req, res) => {
 const addUserAddress = async (req, res) => {
   try {
     req.body.createdAt = new Date();
-    await userService.addUserAddress(req.params.id, req.body);
+    const endereco = await userService.addUserAddress(req.params.id, req.body);
+
+    if (endereco) {
       return res
       .status(201)
       .send("Novo endereço cadastrado com sucesso!");  
-    
+    } else {
+      return res
+      .status(400)
+      .send("Não inserido, tente novamente mais tarde!");  
+    }    
   } catch (err) {
     return res
       .status(500)
@@ -204,11 +210,24 @@ const addUserAddress = async (req, res) => {
 
 const removeUserAddress = async (req, res) => {
   try {
-    await userService.removeUserAddress(req.body.id, req.body.addressId);
-    
+    const endereco = await userService.removeUserAddress(req.body.id, req.body.addressId);
+    let found = false;
+
+    endereco.enderecos.map((valor, chave) => {
+      if(valor._id == req.body.addressId){
+        found = true;
+      }
+    })
+
+    if (found){
       return res
       .status(200)
       .send("Endereço removido com sucesso!");  
+    } else {
+      return res
+      .status(400)
+      .send("Não removido, tente novamente mais tarde!");  
+    }
   } catch (err) {
     return res
       .status(500)
