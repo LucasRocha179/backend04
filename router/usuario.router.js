@@ -1,8 +1,10 @@
 const router = require("express").Router();
 const usuario = require("../controller/usuario.controller");
 
+const authMiddleware = require("../middleware/auth.middleware");
+
 router.get("/find/:id", usuario.find);
-router.get("/findAll", usuario.findAll);
+router.get("/findAll", authMiddleware, usuario.findAll);
 
 router.post("/create", usuario.create);
 router.post("/addAddress/:id", usuario.addUserAddress);
