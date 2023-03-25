@@ -23,18 +23,18 @@ module.exports = async (req, res, next) => {
         }
 
         const decoded = authService.validateToken(token, segredo);
-        
+
         const user = await findUser(decoded);
 
         if (!user || !user.id) {
-            return res.status(401).send({message: "Token inválido!" })   
-        }   
+            return res.status(401).send({ message: "Token inválido!" })
+        }
 
         req.userId = decoded.id;
-        
+
         return next();
-        
+
     } catch (e) {
-        return res.status(500).send({message: "Erro interno, tente mais tarde!" });
+        return res.status(500).send({ message: "Erro interno, tente mais tarde!" });
     }
 }

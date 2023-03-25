@@ -7,6 +7,7 @@ const connectToDatabase = require("./database/database");
 
 const usuario = require("./router/usuario.router");
 const produto = require("./router/produto.router");
+const categoria = require("./router/categoria.router");
 const auth = require("./router/auth.router");
 
 const port = 3000;
@@ -32,6 +33,7 @@ app.get("/", (req, res) => {
 
 app.use("/usuario", usuario);
 app.use("/produto", produto);
+app.use("/categoria", categoria);
 app.use("/auth", auth);
 
 app.listen(port, () => {
