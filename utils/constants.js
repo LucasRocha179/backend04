@@ -1,3 +1,3 @@
-const segredo = "641607867d7c90a60253ea84";
+const segredo = process.env.SECRET;
 
 module.exports = segredo;
