@@ -1,4 +1,4 @@
-const UserMongo = require("../model/usuario");
+const UserMongo = require("../model/Usuario");
 const jwt = require("jsonwebtoken");
 
 const loginService = (email) => UserMongo.findOne({ email }).select("senha");

@@ -1,4 +1,4 @@
-const UserMongo = require("../model/usuario");
+const UserMongo = require("../model/Usuario");
 
 const findUser = (id) => {
     return UserMongo.findById(id);
