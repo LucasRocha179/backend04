@@ -103,10 +103,37 @@ const deleteProduto = async (req, res) => {
     }
 };
 
+const addCategoria = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const categoria = await produtoService.addCategoria(id, req.body);
+        res.status(200).send(categoria);
+    } catch (err) {
+        return res
+            .status(500)
+            .send("Erro no servidor, tente novamente mais tarde!");
+    }
+};
+
+
+const removeCategoria = async (req, res) => {
+    try {
+        const categoria = res.send(await produtoService.removeCategoria(req.body));
+        res.status(200).send(categoria);
+    } catch (err) {
+        return res
+            .status(500)
+            .send("Erro no servidor, tente novamente mais tarde!");
+    }
+};
+
+
 module.exports = {
     findAll,
     find,
     create,
     update,
     deleteProduto,
+    addCategoria,
+    removeCategoria,
 };
