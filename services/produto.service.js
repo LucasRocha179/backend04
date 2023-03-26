@@ -4,8 +4,8 @@ const findProduto = (id) => {
     return Produto.findById(id);
 }
 
-const findAllProdutos = () => {
-    return Produto.find();
+const findAllProdutos = (limit, offset) => {
+    return Produto.find().limit(limit).skip(offset);
 }
 
 const createProduto = (produto) => {

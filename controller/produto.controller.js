@@ -3,7 +3,7 @@ const produtoService = require("../services/produto.service");
 const findAll = async (req, res) => {
     console.log("LOG: requested findAllProdutos");
     try {
-        return res.status(200).send(await produtoService.findAllProdutos());
+        return res.status(200).send(await produtoService.findAllProdutos(req.query.limit, req.query.offset));
     } catch (err) {
         return res
             .status(500)
