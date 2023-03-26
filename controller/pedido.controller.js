@@ -75,7 +75,6 @@ const update = async (req, res) => {
 const updateStatus = async (req, res) => {
     
     const id = req.params.id;
-    const corpo = req.body;
 
     try {
         const pedido = await pedidoService.findPedido(id);
@@ -85,7 +84,7 @@ const updateStatus = async (req, res) => {
 
         try {
             res.status(201).send(
-                await pedidoService.updateStatusPedido(id, corpo).then(() => {
+                await pedidoService.updateStatusPedido(id).then(() => {
                     console.log(`LOG: Status pedido editado!`);
                 })
             );

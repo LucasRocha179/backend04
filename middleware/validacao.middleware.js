@@ -1,13 +1,67 @@
+const objectId = require("mongoose").Types.ObjectId;
+
 const validaPedido = (req, res, next) => {
+    let erros = [];
     if(!req.body.produtos){
-        return res.status(400).send({message: `O campo produtos é obrigatório`})
+        erros.push("produtos")    
     }
     if(!req.body.precoTotal){
-        return res.status(400).send({message: `O campo precoTotal é obrigatório`})
+        erros.push("precoTotal")    
     }
-    return next();
+    if(erros.length == 0){
+        return next();
+    } else {
+        return res.status(400).send({message: `Campo(s) ${erros} não informado(s)`});   
+    }
+}
+
+const validaLogin = (req, res, next) => {
+    let erros = [];
+    if(!req.body.email){
+        erros.push("email")    
+    }
+    if(!req.body.senha){
+        erros.push("senha")    
+    }
+    if(erros.length == 0){
+        return next();
+    } else {
+        return res.status(400).send({message: `Campo(s) ${erros} não informado(s)`});   
+    }
+}
+
+const validaProdutos = (req, res, next) => {
+    let erros = [];
+    if(!req.body.nome){
+        erros.push("nome")    
+    }
+    if(!req.body.descricao){
+        erros.push("descricao")    
+    }
+    if(!req.body.precoUnitario){
+        erros.push("precoUnitario")    
+    }
+    if(!req.body.codigoBarra){
+        erros.push("codigoBarra")    
+    }
+    if(erros.length == 0){
+        return next();
+    } else {
+        return res.status(400).send({message: `Campo(s) ${erros} não informado(s)`});   
+    }
+}
+
+const validaId = (req, res, next) => {
+    if(objectId.isValid(req.params.id)){
+        return next();
+    } else{
+        return res.status(400).send({message: `Campo ID inválido`});   
+    }
 }
 
 module.exports = {
     validaPedido,
+    validaProdutos,
+    validaId,
+    validaLogin,
 }

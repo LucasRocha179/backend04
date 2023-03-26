@@ -2,16 +2,17 @@ const router = require("express").Router();
 const produto = require("../controller/produto.controller");
 
 const authMiddleware = require("../middleware/auth.middleware");
+const { validaProdutos, validaId } = require("../middleware/validacao.middleware");
 
-router.get("/find/:id", authMiddleware, produto.find);
+router.get("/find/:id", validaId,  authMiddleware, produto.find);
 router.get("/findAll", authMiddleware, produto.findAll);
 
-router.post("/create", authMiddleware, produto.create);
-router.post("/addCategoria/:id", authMiddleware, produto.addCategoria);
+router.post("/create", validaProdutos, authMiddleware, produto.create);
+router.post("/addCategoria/:id", validaId, authMiddleware, produto.addCategoria);
 
-router.put("/update/:id", authMiddleware, produto.update);
+router.put("/update/:id", validaId,  authMiddleware, produto.update);
 
-router.delete("/remove/:id", authMiddleware, produto.deleteProduto);
-router.delete("/removeCategoria/:id", authMiddleware, produto.removeCategoria);
+router.delete("/remove/:id", validaId, authMiddleware, produto.deleteProduto);
+router.delete("/removeCategoria/:id", validaId, authMiddleware, produto.removeCategoria);
 
 module.exports = router;
