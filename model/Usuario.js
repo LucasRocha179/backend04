@@ -16,10 +16,10 @@ const userScheme = new mongoose.Schema(
             CEP: {type: String, required: true},
             createdAt: {type: Date, required: true}
         }],
-        // produtos_fav: [{
-        //     _id: {type: mongoose.Schema.Types.ObjectId, required: true, unique: true, ref: "produtos"},
-        //     createdAt: {type: Date, required: true}
-        // }],
+        produtos_fav: [{
+            _id: {type: mongoose.Schema.Types.ObjectId, required: false, unique: false, ref: "produtos"},
+            createdAt: {type: Date, default: Date.now, required: false}
+        }],
         datacadastro: {type: String, required: false},
         isAdmin: {type: Boolean, required: true, default: false}
     }

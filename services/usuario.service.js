@@ -55,11 +55,39 @@ const removeUserAddress = (id, addressId) => {
 }
 
 const addUserFavProduct = (id, produto) => {
-  
+    return UserMongo.findOneAndUpdate(
+        {
+            _id: id,
+        },
+        {
+            $push:{
+                produtos_fav: {
+                    _id: produto.id,
+                },
+            }
+        },
+        {
+            rawresult: true,
+        }
+    );
 }
 
-const removeUserFavProduct = (id) => {
-    
+const removeUserFavProduct = (id, produto) => {
+    return UserMongo.findOneAndUpdate(
+        {
+            _id: id,
+        },
+        {
+            $pull:{
+                produtos_fav: {
+                    _id: produto.id,
+                },
+            }
+        },
+        {
+            rawresult: true,
+        }
+    );
 }
 
 module.exports = {

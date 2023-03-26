@@ -237,7 +237,9 @@ const removeUserAddress = async (req, res) => {
 
 const addUserFavProduct = async (req, res) => {
   try {
-   
+    return res
+    .status(201)
+    .send(await userService.addUserFavProduct(req.params.id, req.body)); 
   } catch (err) {
     return res
       .status(500)
@@ -247,7 +249,9 @@ const addUserFavProduct = async (req, res) => {
 
 const removeUserFavProduct = async (req, res) => {
   try {
-   
+    return res
+    .status(201)
+    .send(await userService.removeUserFavProduct(req.params.id, req.body)); 
   } catch (err) {
     return res
       .status(500)

@@ -14,7 +14,7 @@ router.put("/update/:id",authMiddleware, usuario.update);
 
 router.delete("/remove/:id",authMiddleware, usuario.deleteUser);
 router.delete('/removeAddress',authMiddleware, usuario.removeUserAddress);
-router.delete('/removeFavProduct',authMiddleware, usuario.removeUserFavProduct);
+router.delete('/removeFavProduct/:id',authMiddleware, usuario.removeUserFavProduct);
 
 
 module.exports = router;
