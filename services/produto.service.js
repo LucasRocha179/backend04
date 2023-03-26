@@ -39,10 +39,10 @@ const addCategoria = (id, categoria) => {
     );
 }
 
-const removeCategoria = (categoria) => {
+const removeCategoria = (id, categoria) => {
     return Produto.findOneAndUpdate(
         {
-            _id: categoria.id
+            _id: id
         },
         {
             $pull: {

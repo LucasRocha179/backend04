@@ -1,0 +1,114 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Produto",
+    "dateExported": "2023-03-26T20:58:09.883Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9c0cd544-c090-42bc-8c80-1ce6eb365f07",
+            "colId": "eb736133-b592-47b1-9d61-24099bd611dc",
+            "containerId": "",
+            "name": "{{URL}}{{port}}/produto/create",
+            "url": "{{URL}}{{port}}/produto/create",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-03-26T20:23:50.045Z",
+            "modified": "2023-03-26T20:57:15.795Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"descricao\": \"adsfafas\",\n  \"nome\": \"afdafd\",\n  \"precoUnitario\": 11.25,\n  \"imagem\": \"adf\",\n  \"codigoBarra\": \"5345345\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "23a06be8-6c12-4be4-a035-c58d2c2222d1",
+            "colId": "eb736133-b592-47b1-9d61-24099bd611dc",
+            "containerId": "",
+            "name": "http://localhost:3000/produto/findAll",
+            "url": "http://localhost:3000/produto/findAll",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-03-26T20:24:01.142Z",
+            "modified": "2023-03-26T20:24:01.142Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "2e0af9fd-741e-427f-b9d7-1ef43cab6d80",
+            "colId": "eb736133-b592-47b1-9d61-24099bd611dc",
+            "containerId": "",
+            "name": "{{URL}}{{port}}/produto/addCategoria/",
+            "url": "{{URL}}{{port}}/produto/addCategoria/6420b1abfb356123240a4728",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-03-26T20:24:09.878Z",
+            "modified": "2023-03-26T20:57:32.672Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"641f47352562857eb1bfa4c1\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "81700bce-9d05-4ac6-a08e-d9d771baee35",
+            "colId": "eb736133-b592-47b1-9d61-24099bd611dc",
+            "containerId": "",
+            "name": "removeCategoria",
+            "url": "{{URL}}{{port}}/produto/removeCategoria/6420ada0f1707c0d5089eb73",
+            "method": "DELETE",
+            "sortNum": 35000,
+            "created": "2023-03-26T20:32:11.391Z",
+            "modified": "2023-03-26T20:41:40.459Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"idCategoria\": \"641f47352562857eb1bfa4c1\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "02f3b3cb-f784-44ec-a853-7800ef9534d8",
+            "colId": "eb736133-b592-47b1-9d61-24099bd611dc",
+            "containerId": "",
+            "name": "delete produto",
+            "url": "http://localhost:3000/produto/remove/641f518a54cee125075c14cd",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-03-26T20:24:17.004Z",
+            "modified": "2023-03-26T20:39:55.540Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        }
+    ]
+}

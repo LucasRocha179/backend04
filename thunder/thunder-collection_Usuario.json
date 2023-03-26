@@ -1,0 +1,139 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Usuario",
+    "dateExported": "2023-03-26T20:30:01.830Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "14af9127-9874-43b4-b98c-802b9c025664",
+            "colId": "6b666206-8667-44a3-a3f7-17e77b96cef6",
+            "containerId": "",
+            "name": "findAll",
+            "url": "http://localhost:3000/usuario/findAll",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-03-26T20:21:59.164Z",
+            "modified": "2023-03-26T20:21:59.164Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "664a04e6-148c-485c-8915-a9cf17046cb2",
+            "colId": "6b666206-8667-44a3-a3f7-17e77b96cef6",
+            "containerId": "",
+            "name": "find",
+            "url": "http://localhost:3000/usuario/find/64175c87c55ee3bd3e290688",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-03-26T20:22:17.128Z",
+            "modified": "2023-03-26T20:22:17.128Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "05bf8609-114c-4d00-8410-dd070ea5921a",
+            "colId": "6b666206-8667-44a3-a3f7-17e77b96cef6",
+            "containerId": "",
+            "name": "addAddress",
+            "url": "{{URL}}{{port}}/usuario/addAddress/641f4d97c5cebb7e4602bd67",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-03-26T20:22:24.962Z",
+            "modified": "2023-03-26T20:28:07.625Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"rua\": \"Av das Araucarias\",\n  \"numero\": 1784,\n  \"CEP\": \"71.936-250\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.NjQxZjRkOTdjNWNlYmI3ZTQ2MDJiZDY3.WIc07KGN6ICunMejQ9JVgKSymA-LtBjESHRxUGiAr2Q"
+            },
+            "tests": []
+        },
+        {
+            "_id": "7761badb-1060-49cf-8743-5753172aba89",
+            "colId": "6b666206-8667-44a3-a3f7-17e77b96cef6",
+            "containerId": "",
+            "name": "rmAddress",
+            "url": "{{URL}}{{port}}/usuario/removeAddress",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-03-26T20:22:31.586Z",
+            "modified": "2023-03-26T20:22:31.586Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"64190d46a72b947218981390\",\n  \"addressId\": \"641a4edddf069ba6a9edd9da\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bd1ce01f-38ff-41a5-a4c8-0c42eabdf1d7",
+            "colId": "6b666206-8667-44a3-a3f7-17e77b96cef6",
+            "containerId": "",
+            "name": "udpate",
+            "url": "http://localhost:3000/usuario/update/641a51ff293250eba0a114bf",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-03-26T20:22:40.354Z",
+            "modified": "2023-03-26T20:22:40.354Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Lucas Rocha2\",\n  \"nascimento\": \"29/10/1992\",\n  \"email\": \"lucas@uol.com\",\n  \"senha\": \"1231231\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f88b33a8-9b1a-4024-b24b-d6201a938244",
+            "colId": "6b666206-8667-44a3-a3f7-17e77b96cef6",
+            "containerId": "",
+            "name": "create",
+            "url": "{{URL}}{{port}}/usuario/create",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-03-26T20:22:57.835Z",
+            "modified": "2023-03-26T20:22:57.835Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Lucas Rochaa3\",\n  \"nascimento\": \"29/10/1992\",\n  \"email\": \"lucas@uol.com\",\n  \"senha\": \"123456\",\n  \"imagem\": \"nenhuma\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "148ab918-86bd-419a-bb34-ecdfea74ae50",
+            "colId": "6b666206-8667-44a3-a3f7-17e77b96cef6",
+            "containerId": "",
+            "name": "delete",
+            "url": "http://localhost:3000/usuario/remove/641e5315402169c78b2040c7",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2023-03-26T20:23:08.781Z",
+            "modified": "2023-03-26T20:23:08.781Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        }
+    ]
+}

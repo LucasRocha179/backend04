@@ -118,7 +118,8 @@ const addCategoria = async (req, res) => {
 
 const removeCategoria = async (req, res) => {
     try {
-        const categoria = res.send(await produtoService.removeCategoria(req.body));
+        const id = req.params.id;
+        const categoria = await produtoService.removeCategoria(id, req.body);
         res.status(200).send(categoria);
     } catch (err) {
         return res

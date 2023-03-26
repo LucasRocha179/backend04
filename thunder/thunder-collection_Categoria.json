@@ -1,0 +1,91 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Categoria",
+    "dateExported": "2023-03-26T20:30:44.056Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d4996e86-3c01-4367-8d2e-828f4f2f7fc4",
+            "colId": "aaffdcbd-80b2-485b-94b8-14255a6ac418",
+            "containerId": "",
+            "name": "update categoria",
+            "url": "http://localhost:3000/categoria/update/641f46a92562857eb1bfa4b1",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2023-03-26T20:24:37.251Z",
+            "modified": "2023-03-26T20:24:37.251Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"1213\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.NjQxYTU5MGNjYTZmNjFiOTZiM2Y1NTVh.oPPmQP30EMhuioAYJS3yVXLNKvMOYgfexGx8ojKFbkM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "a71b8842-41f1-41be-8bb0-4cc64b9592be",
+            "colId": "aaffdcbd-80b2-485b-94b8-14255a6ac418",
+            "containerId": "",
+            "name": "{{URL}}{{port}}/categoria/create",
+            "url": "{{URL}}{{port}}/categoria/create",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-03-26T20:24:46.049Z",
+            "modified": "2023-03-26T20:27:21.139Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"tesate\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.NjQxZjRkOTdjNWNlYmI3ZTQ2MDJiZDY3.WIc07KGN6ICunMejQ9JVgKSymA-LtBjESHRxUGiAr2Q"
+            },
+            "tests": []
+        },
+        {
+            "_id": "312b4fdd-5474-47dd-8f8b-195176ff6c79",
+            "colId": "aaffdcbd-80b2-485b-94b8-14255a6ac418",
+            "containerId": "",
+            "name": "delete categoria",
+            "url": "http://localhost:3000/categoria/remove/641f46a92562857eb1bfa4b1",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-03-26T20:24:54.016Z",
+            "modified": "2023-03-26T20:24:54.016Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.NjQxYTU5MGNjYTZmNjFiOTZiM2Y1NTVh.oPPmQP30EMhuioAYJS3yVXLNKvMOYgfexGx8ojKFbkM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ee2416b0-3d5a-488b-a42c-6e95faec6acb",
+            "colId": "aaffdcbd-80b2-485b-94b8-14255a6ac418",
+            "containerId": "",
+            "name": "http://localhost:3000/categoria/findAll",
+            "url": "http://localhost:3000/categoria/findAll",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-03-26T20:25:06.689Z",
+            "modified": "2023-03-26T20:25:06.689Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        }
+    ]
+}
