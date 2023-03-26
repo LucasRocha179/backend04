@@ -1,9 +1,9 @@
-const categoriaService = require("../services/categoria.service");
+const carrinhoService = require("../services/carrinho.service");
 
 const findAll = async (req, res) => {
-    console.log("LOG: requested findAllCategorias");
+    console.log("LOG: requested findAllCarrinhos");
     try {
-        return res.status(200).send(await categoriaService.findAllCategorias());
+        return res.status(200).send(await carrinhoService.findAllCarrinhos());
     } catch (err) {
         return res
             .status(500)
@@ -17,12 +17,12 @@ const find = async (req, res) => {
         if (id == null) {
             return res.send({ message: "parametro vazio!" });
         }
-        console.log(`LOG: requested findCategoria ${req.params.id}`);
-        const categoria = await categoriaService.findCategoria(id);
-        if (categoria == null) {
-            return res.status(404).send("Categoria não encontrada!");
+        console.log(`LOG: requested findCarrinho ${req.params.id}`);
+        const carrinho = await carrinhoService.findCarrinho(id);
+        if (carrinho == null) {
+            return res.status(404).send("Carrinho não encontrada!");
         }
-        return res.status(200).send(categoria);
+        return res.status(200).send(carrinho);
     } catch (err) {
         if (err.kind == "ObjectId") {
             return res
@@ -37,37 +37,29 @@ const find = async (req, res) => {
 };
 
 const create = async (req, res) => {
-    if (req.body.nome == null) {
-        return res.send({ message: "request body vazio!" });
-    }
     try {
-        const corpo = {
-            ...req.body
-        }
-        console.log(`LOG: novo categoria ${req.body.nome}`);
-        res.status(201).send(await categoriaService.createCategoria(corpo));
+        console.log(`LOG: novo carrinho`);
+        res.status(201).send(await carrinhoService.createCarrinho(req.body));
     } catch (e) {
         return res.status(400).send({ message: e.message });
     }
 };
 
 const update = async (req, res) => {
-    if (req.params.id == null) {
-        return res.send({ message: "parametro vazio!" });
-    }
+    
     const id = req.params.id;
-    const category = req.body;
+    const corpo = req.body;
 
     try {
-        const categoria = await categoriaService.findCategoria(id);
-        if (categoria == null) {
-            return res.status(500).send(`O categoria ${id} não existe na base!`);
+        const carrinho = await carrinhoService.findCarrinho(id);
+        if (carrinho == null) {
+            return res.status(500).send(`O carrinho ${id} não existe na base!`);
         }
 
         try {
             res.status(201).send(
-                await categoriaService.updateCategoria(id, category).then(() => {
-                    console.log(`LOG: ${category.nome} editado!`);
+                await carrinhoService.updateCarrinho(id, corpo).then(() => {
+                    console.log(`LOG: carrinho editado!`);
                 })
             );
         } catch (e) {
@@ -80,19 +72,19 @@ const update = async (req, res) => {
     }
 };
 
-const deleteCategoria = async (req, res) => {
+const deleteCarrinho = async (req, res) => {
     try {
         if (req.params.id == null) {
             return res.send({ message: "parametro vazio!" });
         }
         const id = req.params.id;
 
-        const deletedCategoria = await categoriaService.deleteCategoria(id);
+        const deletedCarrinho = await carrinhoService.deleteCarrinho(id);
 
-        if (deletedCategoria == null) {
-            res.status(404).send({ message: "Categoria não encontrada, tente novamente!" });
+        if (deletedCarrinho == null) {
+            res.status(404).send({ message: "Carrinho não encontrada, tente novamente!" });
         } else {
-            res.status(200).send({ message: "Categoria excluída!" });
+            res.status(200).send({ message: "Carrinho excluída!" });
         }
     } catch (err) {
         return res
@@ -106,5 +98,5 @@ module.exports = {
     find,
     create,
     update,
-    deleteCategoria,
+    deleteCarrinho,
 };
