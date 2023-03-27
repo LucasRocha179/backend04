@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Usuario",
-    "dateExported": "2023-03-26T20:30:01.830Z",
+    "dateExported": "2023-03-27T00:43:20.515Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -42,11 +42,11 @@
             "colId": "6b666206-8667-44a3-a3f7-17e77b96cef6",
             "containerId": "",
             "name": "addAddress",
-            "url": "{{URL}}{{port}}/usuario/addAddress/641f4d97c5cebb7e4602bd67",
+            "url": "{{URL}}{{port}}/usuario/addAddress/6420c002ef37d0d3794361cd",
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-03-26T20:22:24.962Z",
-            "modified": "2023-03-26T20:28:07.625Z",
+            "modified": "2023-03-26T23:16:26.913Z",
             "headers": [],
             "params": [],
             "body": {
@@ -56,7 +56,53 @@
             },
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiJ9.NjQxZjRkOTdjNWNlYmI3ZTQ2MDJiZDY3.WIc07KGN6ICunMejQ9JVgKSymA-LtBjESHRxUGiAr2Q"
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "7847381b-7fef-4e93-a49c-eadcc7dbac1e",
+            "colId": "6b666206-8667-44a3-a3f7-17e77b96cef6",
+            "containerId": "",
+            "name": "removeFavProdct",
+            "url": "{{URL}}{{port}}/usuario/removeFavProduct/6420c002ef37d0d3794361cd",
+            "method": "DELETE",
+            "sortNum": 35000,
+            "created": "2023-03-26T21:43:26.905Z",
+            "modified": "2023-03-26T21:59:03.053Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"6420b19ffb356123240a471c\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "3998a516-8557-4237-a919-2346c4e00674",
+            "colId": "6b666206-8667-44a3-a3f7-17e77b96cef6",
+            "containerId": "",
+            "name": "addFavProdct",
+            "url": "{{URL}}{{port}}/usuario/addFavProdct/6420c002ef37d0d3794361cd",
+            "method": "POST",
+            "sortNum": 37500,
+            "created": "2023-03-26T21:45:54.751Z",
+            "modified": "2023-03-26T21:58:49.779Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"6420b19ffb356123240a471c\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
             },
             "tests": []
         },
@@ -122,11 +168,11 @@
             "colId": "6b666206-8667-44a3-a3f7-17e77b96cef6",
             "containerId": "",
             "name": "delete",
-            "url": "http://localhost:3000/usuario/remove/641e5315402169c78b2040c7",
+            "url": "http://localhost:3000/usuario/remove/641f4d97c5cebb7e4602bd67",
             "method": "DELETE",
             "sortNum": 70000,
             "created": "2023-03-26T20:23:08.781Z",
-            "modified": "2023-03-26T20:23:08.781Z",
+            "modified": "2023-03-26T21:52:27.070Z",
             "headers": [],
             "params": [],
             "auth": {

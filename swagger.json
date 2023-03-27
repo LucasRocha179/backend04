@@ -1,0 +1,328 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Pizzaria",
+        "description": "API de Pizzaria completa contento CRUD de vários assuntos",
+        "contact": {
+            "name": "Lucas",
+            "email": "lucasrocha170@hotmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000/",
+            "description": "API DE TESTE LOCAL"
+        },
+        {
+            "url": "http://89.116.214.208:3000/",
+            "description": "API DE TESTE EM SERVIDOR REAL"
+        }
+    ],
+    "paths": {
+        "/usuario/findAll": { 
+            "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "summary": "Lista de todos os Usuários da API",
+                "description": "Rota responsável por listar todos usuários",
+                "tags": [
+                    "Usuario"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "name": "limit"
+                    },
+                    {
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "name": "offset"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Usuario" 
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum usuário encontrado!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/usuario/find/{id}": {
+            "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    }
+                ],
+                "summary": "Lista um usuário específico",
+                "description": "Rota responsável por listar um usuário específico",
+                "tags": [
+                    "Usuario"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Usuario" 
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum usuário encontrado!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        },
+        "schemas": {
+            "Usuario": {
+                "type": "object",
+                "properties": {
+                    "nome": {
+                        "type": "string",
+                        "description": "O nome do usuário.",
+                        "example": "Fulano de Tal"
+                    },
+                    "nascimento": {
+                        "type": "string",
+                        "description": "A data de nascimento do usuário.",
+                        "example": "1990-01-01"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email",
+                        "description": "O endereço de e-mail do usuário.",
+                        "example": "fulano@example.com"
+                    },
+                    "userID": {
+                        "type": "string",
+                        "description": "O identificador único do usuário.",
+                        "example": "1234567890"
+                    },
+                    "senha": {
+                        "type": "string",
+                        "description": "A senha do usuário.",
+                        "example": "Senha123"
+                    },
+                    "imagem": {
+                        "type": "string",
+                        "description": "A URL da imagem de perfil do usuário.",
+                        "example": "https://example.com/perfil.jpg"
+                    },
+                    "enderecos": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "rua": {
+                                    "type": "string",
+                                    "description": "O nome da rua do endereço do usuário.",
+                                    "example": "Rua Principal"
+                                },
+                                "numero": {
+                                    "type": "string",
+                                    "description": "O número do endereço do usuário.",
+                                    "example": "123"
+                                },
+                                "complemento": {
+                                    "type": "string",
+                                    "description": "O complemento do endereço do usuário (opcional).",
+                                    "example": "Apto 101"
+                                },
+                                "CEP": {
+                                    "type": "string",
+                                    "description": "O CEP do endereço do usuário.",
+                                    "example": "12345-678"
+                                },
+                                "createdAt": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "description": "A data e hora em que o endereço foi criado.",
+                                    "example": "2023-03-26T15:00:00Z"
+                                }
+                            },
+                            "required": [
+                                "rua",
+                                "numero",
+                                "CEP",
+                                "createdAt"
+                            ]
+                        },
+                        "description": "A lista de endereços do usuário."
+                    },
+                    "produtos_fav": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "_id": {
+                                    "type": "string",
+                                    "description": "O identificador único do produto favorito do usuário.",
+                                    "example": "1234567890abcdef12345678"
+                                },
+                                "createdAt": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "description": "A data e hora em que o produto favorito foi adicionado (opcional).",
+                                    "example": "2023-03-26T15:00:00Z"
+                                }
+                            }
+                        },
+                        "description": "A lista de produtos favoritos do usuário."
+                    },
+                    "datacadastro": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "A data e hora em que a conta do usuário foi criada (opcional).",
+                        "example": "2023-03-26T15:00:00Z"
+                    },
+                    "isAdmin": {
+                        "type": "boolean",
+                        "description": "Indica se o usuário é um administrador.",
+                        "example": false
+                    }
+                },
+                "required": [
+                    "nome",
+                    "email",
+                    "userID",
+                    "senha",
+                    "imagem",
+                    "isAdmin"
+                ],
+                "description": "Um objeto que representa um usuário cadastrado no sistema."
+            }
+        }
+    }
+}

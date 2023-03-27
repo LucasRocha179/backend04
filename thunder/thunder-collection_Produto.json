@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Produto",
-    "dateExported": "2023-03-26T20:58:09.883Z",
+    "dateExported": "2023-03-27T00:43:32.858Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2023-03-26T20:23:50.045Z",
-            "modified": "2023-03-26T20:57:15.795Z",
+            "modified": "2023-03-26T23:00:55.357Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"descricao\": \"adsfafas\",\n  \"nome\": \"afdafd\",\n  \"precoUnitario\": 11.25,\n  \"imagem\": \"adf\",\n  \"codigoBarra\": \"5345345\"\n}",
+                "raw": "{\n  \"descricao\": \"adfs\",\n  \"nome\": \"453535\",\n  \"precoUnitario\": 11.25,\n  \"imagem\": \"adf\",\n  \"codigoBarra\": \"33335\"\n}",
                 "form": []
             },
             "auth": {
@@ -33,13 +33,24 @@
             "colId": "eb736133-b592-47b1-9d61-24099bd611dc",
             "containerId": "",
             "name": "http://localhost:3000/produto/findAll",
-            "url": "http://localhost:3000/produto/findAll",
+            "url": "http://localhost:3000/produto/findAll?limit=10&offset=0",
             "method": "GET",
             "sortNum": 20000,
             "created": "2023-03-26T20:24:01.142Z",
-            "modified": "2023-03-26T20:24:01.142Z",
+            "modified": "2023-03-26T23:01:27.924Z",
             "headers": [],
-            "params": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "10",
+                    "isPath": false
+                },
+                {
+                    "name": "offset",
+                    "value": "0",
+                    "isPath": false
+                }
+            ],
             "auth": {
                 "type": "bearer",
                 "bearer": "{{token}}"
@@ -55,7 +66,7 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-03-26T20:24:09.878Z",
-            "modified": "2023-03-26T20:57:32.672Z",
+            "modified": "2023-03-26T22:51:02.894Z",
             "headers": [],
             "params": [],
             "body": {

@@ -12,6 +12,8 @@ const carrinho = require("./router/carrinho.router");
 const pedido = require("./router/pedido.router");
 const auth = require("./router/auth.router");
 
+const docs = require("./router/docs.router");
+
 const port = 3000;
 
 app.use(express.json());
@@ -38,6 +40,7 @@ app.use("/produto", produto);
 app.use("/categoria", categoria);
 app.use("/carrinho", carrinho);
 app.use("/pedido", pedido);
+app.use("/docs", docs);
 app.use("/auth", auth);
 
 app.listen(port, () => {
