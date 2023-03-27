@@ -4,8 +4,8 @@ const findPedido = (id) => {
     return Pedido.findById(id);
 }
 
-const findAllPedidos = () => {
-    return Pedido.find();
+const findAllPedidos = (limit, offset) => {
+    return Pedido.find().limit(limit).skip(offset);
 }
 
 const createPedido = (pedido) => {

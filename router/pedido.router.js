@@ -3,9 +3,10 @@ const pedido = require("../controller/pedido.controller");
 
 const authMiddleware = require("../middleware/auth.middleware");
 const { validaPedido, validaId } = require("../middleware/validacao.middleware");
+const paginacaoMiddleware = require("../middleware/paginacao.middleware");
 
 router.get("/find/:id", validaId,  authMiddleware, pedido.find);
-router.get("/findAll", authMiddleware, pedido.findAll);
+router.get("/findAll", paginacaoMiddleware, authMiddleware, pedido.findAll);
 
 router.post("/create", validaPedido, authMiddleware, pedido.create);
 

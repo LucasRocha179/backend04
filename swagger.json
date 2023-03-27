@@ -20,7 +20,7 @@
         }
     ],
     "paths": {
-        "/usuario/findAll": { 
+        "/usuario/findAll": {
             "get": {
                 "security": [
                     {
@@ -52,12 +52,12 @@
                     "200": {
                         "description": "Ok, tarefa executada!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "array",
                                     "items": {
                                         "type": "object",
-                                        "$ref": "#/components/schemas/Usuario" 
+                                        "$ref": "#/components/schemas/Usuario"
                                     }
                                 }
                             }
@@ -66,13 +66,13 @@
                     "401": {
                         "description": "Erro de autenticação, verifique o token!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "object",
                                     "properties": {
                                         "message": {
                                             "type": "String"
-                                        } 
+                                        }
                                     }
                                 }
                             }
@@ -81,13 +81,13 @@
                     "404": {
                         "description": "Not Found, nenhum usuário encontrado!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "object",
                                     "properties": {
                                         "message": {
                                             "type": "String"
-                                        } 
+                                        }
                                     }
                                 }
                             }
@@ -96,13 +96,13 @@
                     "500": {
                         "description": "Internal Server error!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "object",
                                     "properties": {
                                         "message": {
                                             "type": "String"
-                                        } 
+                                        }
                                     }
                                 }
                             }
@@ -137,12 +137,12 @@
                     "200": {
                         "description": "Ok, tarefa executada!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "array",
                                     "items": {
                                         "type": "object",
-                                        "$ref": "#/components/schemas/Usuario" 
+                                        "$ref": "#/components/schemas/Usuario"
                                     }
                                 }
                             }
@@ -151,13 +151,13 @@
                     "401": {
                         "description": "Erro de autenticação, verifique o token!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "object",
                                     "properties": {
                                         "message": {
                                             "type": "String"
-                                        } 
+                                        }
                                     }
                                 }
                             }
@@ -166,13 +166,13 @@
                     "404": {
                         "description": "Not Found, nenhum usuário encontrado!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "object",
                                     "properties": {
                                         "message": {
                                             "type": "String"
-                                        } 
+                                        }
                                     }
                                 }
                             }
@@ -181,13 +181,13 @@
                     "500": {
                         "description": "Internal Server error!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "object",
                                     "properties": {
                                         "message": {
                                             "type": "String"
-                                        } 
+                                        }
                                     }
                                 }
                             }
@@ -212,17 +212,17 @@
                         },
                         "name": "body"
                     }
-                ],                
+                ],
                 "responses": {
                     "201": {
                         "description": "Ok, tarefa executada!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "array",
                                     "items": {
                                         "type": "object",
-                                        "$ref": "#/components/schemas/Usuario" 
+                                        "$ref": "#/components/schemas/Usuario"
                                     }
                                 }
                             }
@@ -231,13 +231,13 @@
                     "500": {
                         "description": "Internal Server error!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "object",
                                     "properties": {
                                         "message": {
                                             "type": "String"
-                                        } 
+                                        }
                                     }
                                 }
                             }
@@ -275,17 +275,17 @@
                         },
                         "name": "body"
                     }
-                ],               
+                ],
                 "responses": {
                     "201": {
                         "description": "Ok, tarefa executada!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "array",
                                     "items": {
                                         "type": "object",
-                                        "$ref": "#/components/schemas/Usuario" 
+                                        "$ref": "#/components/schemas/Usuario"
                                     }
                                 }
                             }
@@ -294,13 +294,13 @@
                     "500": {
                         "description": "Internal Server error!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "object",
                                     "properties": {
                                         "message": {
                                             "type": "String"
-                                        } 
+                                        }
                                     }
                                 }
                             }
@@ -335,12 +335,12 @@
                     "200": {
                         "description": "Ok, tarefa executada!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "array",
                                     "items": {
                                         "type": "object",
-                                        "$ref": "#/components/schemas/Usuario" 
+                                        "$ref": "#/components/schemas/Usuario"
                                     }
                                 }
                             }
@@ -349,13 +349,13 @@
                     "401": {
                         "description": "Erro de autenticação, verifique o token!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "object",
                                     "properties": {
                                         "message": {
                                             "type": "String"
-                                        } 
+                                        }
                                     }
                                 }
                             }
@@ -364,13 +364,13 @@
                     "404": {
                         "description": "Not Found, nenhum usuário encontrado!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "object",
                                     "properties": {
                                         "message": {
                                             "type": "String"
-                                        } 
+                                        }
                                     }
                                 }
                             }
@@ -379,13 +379,1509 @@
                     "500": {
                         "description": "Internal Server error!",
                         "content": {
-                            "application/json":{
+                            "application/json": {
                                 "schema": {
                                     "type": "object",
                                     "properties": {
                                         "message": {
                                             "type": "String"
-                                        } 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/produto/findAll": {
+            "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "summary": "Lista de todos os Produtos da API",
+                "description": "Rota responsável por listar todos produtos",
+                "tags": [
+                    "Produto"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "name": "limit"
+                    },
+                    {
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "name": "offset"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Produto"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum produto encontrado!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/produto/find/{id}": {
+            "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    }
+                ],
+                "summary": "Lista um produto específico",
+                "description": "Rota responsável por listar um produto específico",
+                "tags": [
+                    "Produto"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Produto"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum produto encontrado!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/produto/create": {
+            "post": {
+                "summary": "Cria um produto específico",
+                "description": "Rota responsável por criar um produto específico",
+                "tags": [
+                    "Produto"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/Produto"
+                        },
+                        "name": "body"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Produto"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/produto/update/{id}": {
+            "put": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "summary": "Edita um produto específico",
+                "description": "Rota responsável por editar um produto específico",
+                "tags": [
+                    "Produto"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    },
+                    {
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/Produto"
+                        },
+                        "name": "body"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Produto"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/produto/remove/{id}": {
+            "delete": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    }
+                ],
+                "summary": "Remove um produto específico",
+                "description": "Rota responsável por remover um produto específico",
+                "tags": [
+                    "Produto"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Produto"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum produto encontrado!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/pedido/findAll": {
+            "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "summary": "Lista de todos os Pedidos da API",
+                "description": "Rota responsável por listar todos pedidos",
+                "tags": [
+                    "Pedido"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "name": "limit"
+                    },
+                    {
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "name": "offset"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Pedido"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum pedido encontrado!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/pedido/find/{id}": {
+            "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    }
+                ],
+                "summary": "Lista um pedido específico",
+                "description": "Rota responsável por listar um pedido específico",
+                "tags": [
+                    "Pedido"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Pedido"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum pedido encontrado!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/pedido/create": {
+            "post": {
+                "summary": "Cria um pedido específico",
+                "description": "Rota responsável por criar um pedido específico",
+                "tags": [
+                    "Pedido"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/Pedido"
+                        },
+                        "name": "body"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Pedido"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/pedido/update/{id}": {
+            "put": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "summary": "Edita um pedido específico",
+                "description": "Rota responsável por editar um pedido específico",
+                "tags": [
+                    "Pedido"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    },
+                    {
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/Pedido"
+                        },
+                        "name": "body"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Pedido"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/pedido/remove/{id}": {
+            "delete": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    }
+                ],
+                "summary": "Remove um pedido específico",
+                "description": "Rota responsável por remover um pedido específico",
+                "tags": [
+                    "Pedido"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Pedido"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum pedido encontrado!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/carrinho/findAll": {
+            "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "summary": "Lista de todos os Carrinhos da API",
+                "description": "Rota responsável por listar todos carrinhos",
+                "tags": [
+                    "Carrinho"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "name": "limit"
+                    },
+                    {
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "name": "offset"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Carrinho"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum carrinho encontrado!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/carrinho/find/{id}": {
+            "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    }
+                ],
+                "summary": "Lista um carrinho específico",
+                "description": "Rota responsável por listar um carrinho específico",
+                "tags": [
+                    "Carrinho"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Carrinho"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum carrinho encontrado!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/carrinho/create": {
+            "post": {
+                "summary": "Cria um carrinho específico",
+                "description": "Rota responsável por criar um carrinho específico",
+                "tags": [
+                    "Carrinho"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/Carrinho"
+                        },
+                        "name": "body"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Carrinho"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/carrinho/update/{id}": {
+            "put": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "summary": "Edita um carrinho específico",
+                "description": "Rota responsável por editar um carrinho específico",
+                "tags": [
+                    "Carrinho"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    },
+                    {
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/Carrinho"
+                        },
+                        "name": "body"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Carrinho"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/carrinho/remove/{id}": {
+            "delete": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    }
+                ],
+                "summary": "Remove um carrinho específico",
+                "description": "Rota responsável por remover um carrinho específico",
+                "tags": [
+                    "Carrinho"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Carrinho"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum carrinho encontrado!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/categoria/findAll": {
+            "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "summary": "Lista de todos os Categorias da API",
+                "description": "Rota responsável por listar todos categorias",
+                "tags": [
+                    "Categoria"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "name": "limit"
+                    },
+                    {
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "name": "offset"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Categoria"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum categoria encontrado!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/categoria/find/{id}": {
+            "get": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    }
+                ],
+                "summary": "Lista um categoria específico",
+                "description": "Rota responsável por listar um categoria específico",
+                "tags": [
+                    "Categoria"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Categoria"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum categoria encontrado!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/categoria/create": {
+            "post": {
+                "summary": "Cria um categoria específico",
+                "description": "Rota responsável por criar um categoria específico",
+                "tags": [
+                    "Categoria"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/Categoria"
+                        },
+                        "name": "body"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Categoria"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/categoria/update/{id}": {
+            "put": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "summary": "Edita um categoria específico",
+                "description": "Rota responsável por editar um categoria específico",
+                "tags": [
+                    "Categoria"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    },
+                    {
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/Categoria"
+                        },
+                        "name": "body"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Categoria"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/categoria/remove/{id}": {
+            "delete": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    }
+                ],
+                "summary": "Remove um categoria específico",
+                "description": "Rota responsável por remover um categoria específico",
+                "tags": [
+                    "Categoria"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Categoria"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum categoria encontrado!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        }
                                     }
                                 }
                             }
@@ -520,6 +2016,208 @@
                     "isAdmin"
                 ],
                 "description": "Um objeto que representa um usuário cadastrado no sistema."
+            },
+            "Produto": {
+                "type": "object",
+                "required": [
+                    "nome",
+                    "descricao",
+                    "precoUnitario",
+                    "imagem",
+                    "codigoBarra",
+                    "categoria",
+                    "createdAt"
+                ],
+                "properties": {
+                    "nome": {
+                        "type": "string",
+                        "description": "Nome do produto"
+                    },
+                    "descricao": {
+                        "type": "string",
+                        "description": "Descrição do produto"
+                    },
+                    "precoUnitario": {
+                        "type": "number",
+                        "format": "float",
+                        "description": "Preço unitário do produto"
+                    },
+                    "imagem": {
+                        "type": "string",
+                        "description": "URL da imagem do produto"
+                    },
+                    "codigoBarra": {
+                        "type": "integer",
+                        "description": "Código de barras do produto"
+                    },
+                    "categoria": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "_id": {
+                                    "type": "string",
+                                    "format": "uuid",
+                                    "description": "ID da categoria do produto"
+                                }
+                            }
+                        },
+                        "description": "Lista de categorias do produto"
+                    },
+                    "createdAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Data de criação do produto"
+                    }
+                }
+            },
+            "Pedido": {
+                "type": "object",
+                "required": [
+                    "produtos",
+                    "precoTotal",
+                    "frete",
+                    "userId",
+                    "concluido"
+                ],
+                "properties": {
+                    "produtos": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": [
+                                "_id",
+                                "quantidade"
+                            ],
+                            "properties": {
+                                "_id": {
+                                    "type": "string",
+                                    "format": "uuid",
+                                    "description": "ID do produto"
+                                },
+                                "quantidade": {
+                                    "type": "integer",
+                                    "description": "Quantidade do produto"
+                                }
+                            }
+                        },
+                        "description": "Lista de produtos do pedido"
+                    },
+                    "createdAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Data de criação do pedido"
+                    },
+                    "precoTotal": {
+                        "type": "number",
+                        "format": "float",
+                        "description": "Preço total do pedido"
+                    },
+                    "frete": {
+                        "type": "number",
+                        "format": "float",
+                        "description": "Preço do frete do pedido"
+                    },
+                    "userId": {
+                        "type": "string",
+                        "format": "uuid",
+                        "description": "ID do usuário que fez o pedido"
+                    },
+                    "concluido": {
+                        "type": "boolean",
+                        "description": "Indica se o pedido foi concluído ou não"
+                    },
+                    "vinculaMesa": {
+                        "type": "integer",
+                        "description": "Número da mesa, caso o pedido esteja vinculado a uma mesa"
+                    },
+                    "enderecoEntrega": {
+                        "type": "object",
+                        "properties": {
+                            "rua": {
+                                "type": "string",
+                                "description": "Rua do endereço de entrega"
+                            },
+                            "numero": {
+                                "type": "string",
+                                "description": "Número do endereço de entrega"
+                            },
+                            "complemento": {
+                                "type": "string",
+                                "description": "Complemento do endereço de entrega"
+                            },
+                            "CEP": {
+                                "type": "string",
+                                "description": "CEP do endereço de entrega"
+                            }
+                        },
+                        "description": "Endereço de entrega do pedido"
+                    }
+                }
+            },
+            "Carrinho": {
+                "type": "object",
+                "properties": {
+                    "produtos": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "_id": {
+                                    "type": "string",
+                                    "format": "objectid"
+                                },
+                                "quantidade": {
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "_id",
+                                "quantidade"
+                            ]
+                        }
+                    },
+                    "createdAt": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "precoTotal": {
+                        "type": "number"
+                    },
+                    "frete": {
+                        "type": "number"
+                    },
+                    "userId": {
+                        "type": "string",
+                        "format": "objectid"
+                    }
+                },
+                "required": [
+                    "produtos",
+                    "createdAt",
+                    "precoTotal",
+                    "frete",
+                    "userId"
+                ]
+            },
+            "Categoria": {
+                "type": "object",
+                "properties": {
+                    "nome": {
+                        "type": "string",
+                        "uniqueItems": true,
+                        "required": true
+                    },
+                    "createdAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "required": true
+                    }
+                },
+                "required": [
+                    "nome",
+                    "createdAt"
+                ]
             }
         }
     }

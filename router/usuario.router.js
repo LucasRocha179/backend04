@@ -3,9 +3,10 @@ const usuario = require("../controller/usuario.controller");
 
 const authMiddleware = require("../middleware/auth.middleware");
 const { validaId, validaEndereco} = require("../middleware/validacao.middleware");
+const paginacaoMiddleware = require("../middleware/paginacao.middleware");
 
 router.get("/find/:id", validaId,authMiddleware, usuario.find);
-router.get("/findAll", authMiddleware, usuario.findAll);
+router.get("/findAll", paginacaoMiddleware, authMiddleware, usuario.findAll);
 
 router.post("/create", usuario.create);
 router.post("/addAddress/:id", validaId, validaEndereco, authMiddleware, usuario.addUserAddress);

@@ -4,8 +4,8 @@ const findCategoria = (id) => {
     return Categoria.findById(id);
 }
 
-const findAllCategorias = () => {
-    return Categoria.find();
+const findAllCategorias = (limit, offset) => {
+    return Categoria.find().limit(limit).skip(offset);
 }
 
 const createCategoria = (categoria) => {

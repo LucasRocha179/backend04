@@ -4,8 +4,8 @@ const findUser = (id) => {
     return UserMongo.findById(id);
 }
 
-const findAllUser = () => {
-    return UserMongo.find();
+const findAllUser = (limit, offset) => {
+    return UserMongo.find().limit(limit).skip(offset);
 }
 
 const createUser = (usuario) => {

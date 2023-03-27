@@ -3,9 +3,10 @@ const carrinho = require("../controller/carrinho.controller");
 
 const authMiddleware = require("../middleware/auth.middleware");
 const {validaPedido, validaId} = require("../middleware/validacao.middleware");
+const paginacaoMiddleware = require("../middleware/paginacao.middleware");
 
 router.get("/find/:id", validaId, authMiddleware, carrinho.find);
-router.get("/findAll", authMiddleware, carrinho.findAll);
+router.get("/findAll", paginacaoMiddleware, authMiddleware, carrinho.findAll);
 
 router.post("/create", validaPedido, authMiddleware, carrinho.create);
 
