@@ -10,7 +10,14 @@ const pedidoScheme = new mongoose.Schema(
         precoTotal: { type: Number, required: true},
         frete: { type: Number, required: true },
         userId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: "usuarios" }, 
-        concluido: {type: Boolean, default: false, required: true}
+        concluido: {type: Boolean, default: false, required: true},
+        vinculaMesa: { type: Number, required: false },
+        enderecoEntrega: {
+            rua: {type: String, required: false},
+            numero: {type: String, required: false},
+            complemento: {type: String, required: false},
+            CEP: {type: String, required: false}
+        }
     }
 );
 

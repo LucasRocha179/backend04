@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LucasRocha179/backend01.git"
+    "url": "git+https://github.com/LucasRocha179/backend04.git"
   },
   "author": "Lucas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LucasRocha179/backend01/issues"
+    "url": "https://github.com/LucasRocha179/backend04/issues"
   },
-  "homepage": "https://github.com/LucasRocha179/backend01#readme",
+  "homepage": "https://github.com/LucasRocha179/backend04#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",

@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Usuario",
-    "dateExported": "2023-03-27T00:43:20.515Z",
+    "dateExported": "2023-03-27T22:59:43.952Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -153,12 +153,12 @@
             "method": "POST",
             "sortNum": 60000,
             "created": "2023-03-26T20:22:57.835Z",
-            "modified": "2023-03-26T20:22:57.835Z",
+            "modified": "2023-03-27T21:44:49.583Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nome\": \"Lucas Rochaa3\",\n  \"nascimento\": \"29/10/1992\",\n  \"email\": \"lucas@uol.com\",\n  \"senha\": \"123456\",\n  \"imagem\": \"nenhuma\"\n}",
+                "raw": "{\n  \"nome\": \"Lucas Rochaa3\",\n  \"nascimento\": \"29/10/1992\",\n  \"email\": \"lucas55@uol.com\",\n  \"senha\": \"123456\",\n  \"imagem\": \"nenhuma\"\n}",
                 "form": []
             },
             "tests": []

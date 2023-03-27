@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Pedido",
-    "dateExported": "2023-03-27T00:44:01.838Z",
+    "dateExported": "2023-03-27T22:59:10.105Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -55,12 +55,12 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-03-26T22:09:56.424Z",
-            "modified": "2023-03-26T22:36:01.507Z",
+            "modified": "2023-03-27T22:27:55.210Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"produtos\": [\n    {\n      \"_id\": \"6420b1abfb356123240a4728\",\n      \"quantidade\": 1\n    }\n  ],\n  \"precoTotal\": 1,\n  \"frete\": 11,\n  \"userId\": \"641f4d97c5cebb7e4602bd67\"\n}",
+                "raw": "{\n  \"produtos\": [\n    {\n      \"_id\": \"6420b1abfb356123240a4728\",\n      \"quantidade\": 1\n    }\n  ],\n  \"precoTotal\": 1,\n  \"frete\": 11,\n  \"userId\": \"642216fc1bbe5d7f656fde40\",\n  \"enderecoEntrega\": {\n            \"rua\": \"xxxxx\",\n            \"complemento\": \"xxxxxxx\",\n            \"CEP\": \"71936-250\"\n  }\n}",
                 "form": []
             },
             "auth": {

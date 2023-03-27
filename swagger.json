@@ -195,6 +195,204 @@
                     }
                 }
             }
+        },
+        "/usuario/create": {
+            "post": {
+                "summary": "Cria um usuário específico",
+                "description": "Rota responsável por criar um usuário específico",
+                "tags": [
+                    "Usuario"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/Usuario"
+                        },
+                        "name": "body"
+                    }
+                ],                
+                "responses": {
+                    "201": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Usuario" 
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/usuario/update/{id}": {
+            "put": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "summary": "Edita um usuário específico",
+                "description": "Rota responsável por editar um usuário específico",
+                "tags": [
+                    "Usuario"
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    },
+                    {
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/Usuario"
+                        },
+                        "name": "body"
+                    }
+                ],               
+                "responses": {
+                    "201": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Usuario" 
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/usuario/remove/{id}": {
+            "delete": {
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "name": "id"
+                    }
+                ],
+                "summary": "Remove um usuário específico",
+                "description": "Rota responsável por remover um usuário específico",
+                "tags": [
+                    "Usuario"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ok, tarefa executada!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "$ref": "#/components/schemas/Usuario" 
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Erro de autenticação, verifique o token!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found, nenhum usuário encontrado!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server error!",
+                        "content": {
+                            "application/json":{
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "String"
+                                        } 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     },
     "components": {
